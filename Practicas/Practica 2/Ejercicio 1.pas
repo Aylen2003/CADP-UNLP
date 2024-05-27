@@ -1,3 +1,4 @@
+{Dado el siguiente programa, indicar qué imprime.}
 program alcance1; 
 var a,b: integer; 
 procedure uno; 
