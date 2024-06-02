@@ -38,7 +38,7 @@ type
      dato: credito;
      sig: lista;
    end;
-  contador = array [cre] of integer;
+  contador = array [cre] of integer; // para parte del inciso b
 
 procedure CargarVector(var a: arrEmpre; // SE DISPONE
 
@@ -72,14 +72,59 @@ begin
   end;
 end;
 
+procedure InicializarContador(var v:contador);
+var
+ i: cre;
+begin
+ for i:= 1 to 6 do 
+    v[i]:= 0;
+end;
 
+procedure minimo(v:contador; var tipoMin: integer; var montoTMin:real);
+var
+  i: cre;
+begin
+ montoTMin:= 9999;
+ for i:= 1 to 6 do begin
+    if (v[i] < montoTMin)then begin
+      montoTMin:= v[i];
+      tipoMin:= i;
+    end;
+ end;
+end;
 
-  // Programa Principal
-  var 
-   a: arrEmpre;
-   L:lista;
-   begin
-    L:= nil;
-    CargarVector(a); // SE DISPONES
-    CargarLista(L);
-   end.
+function Condicion(emple:integer; localidad:cadena):boolean;
+begin
+ Condicion:= (emple >= 40) and ((localidad = 'Neuquen') or (localidad = 'Bariloche'));
+end;
+
+procedure Procesar(L:lista; a:arrEmpre);
+var
+  cant: integer;
+  v: contador;
+  tipo: cre;
+  monto: real;
+begin
+ InicializarContador(v);
+ cant:= 0;
+ while(L <> nil)do begin
+    v[L^.dato.tipo]:= v[L^.dato.tipo] + L^.dato.monto;
+    if(Condicion(a[L^.dato.codigoE].empleados,v[L^.dato.codigoE].loalidad))then
+       cant:= cant + 1;
+    L:= L^.sig:
+  end;
+  minimo(v,tipo,monto);
+  writeln('La cantidad de créditos otorgados a empresas al menos de 40 empleados es:',cant);
+  writeln('El tipo de crédito con menor monto total de créditos otorgados es:',tipo);
+end;
+
+// Programa Principal
+var 
+  a: arrEmpre;
+  L:lista;
+begin
+  L:= nil;
+  CargarVector(a); // SE DISPONES
+  CargarLista(L); // Inciso A
+  Procesar(L,a);
+end.
