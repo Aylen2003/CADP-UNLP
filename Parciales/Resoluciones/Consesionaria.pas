@@ -97,13 +97,40 @@ begin
  Condicion:= ((codigo MOD 2) = 0);
 end;
 
-procedure Procesar();
+procedure Procesar(L:lista; var max: integer; var porcentaje: real);
+var
+  cantAuto, par: integer; // inciso A
+  autoAct: cadena;
+  a: vector;
+begin
+ InicializarVector(a);
+ par:= 0;
+ while (L <> nil) do begin
+   cantAuto:= 0;
+   autoAct:= L^.dato.auto;
+   while(L <> nil) and (autoAct = L^.dato.auto) do begin
+      cantAuto:= cantAuto + 1;
+      if (dniImpar(L^.dato.dni))then
+        a[L^.dato.dia]:= a[L^.dato.dia] + 1;
+      if (Condicion(L^.dato.codigo))then
+         par:= par + 1;
+   end;
+   writeln('La cantidad de autos vendios del modelo', autoAct,'es:', cantAuto);
+   L:= L^.sig;
+   maximo(a,max);
+   writeln('El dia en que se realizaron mas ventas fue:', max);
+   porcentaje:= par*100/cantAuto;
+ end;
+ writeln('El porcentaje es:', porcentaje);
+end;
+
 {Programa Principal}
 var
  L:lista;
-
+ max: integer;
+ procentaje: real;
 begin
  L:= nil;
- CragarLista(L);
+ CargarLista(L);
+ Procesar(L,max,porcentaje);
 end.
-   
