@@ -118,7 +118,20 @@ begin
 end;
 
 procedure insertarOrdenado(var L:lista; elem: jugador);
-
+var
+ nue,act,ant: lista;
+begin
+ new(nue); nue^.dato:= 0; ant:= L; act:= L;
+ while(act <> nil) and (elem.codigo > act^.dato.codigo) do begin
+    ant:= act;
+    act:= act^.sig;
+ end;
+ if (act = ant) then
+    L:= nue
+ else
+   ant^.sig:= nue;
+  nue^.sig:= act;
+end; 
 
 procedure armarLista2(l:lista; var L2:lista);
 begin
@@ -141,5 +154,4 @@ begin
  imprimir(v);
  writeln(jug1,jug2)
  armarLista2(L,L2);
-end;
-  
+end.
