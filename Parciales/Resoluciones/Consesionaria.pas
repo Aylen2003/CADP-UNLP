@@ -99,7 +99,7 @@ end;
 
 procedure Procesar(L:lista; var max: integer; var porcentaje: real);
 var
-  cantAuto, par: integer; // inciso A
+  cantAuto, par: integer; 
   autoAct: cadena;
   a: vector;
 begin
