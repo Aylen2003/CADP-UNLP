@@ -5,6 +5,7 @@ encuentra ordenada por nombre de país de destino y puede haber más de un pedid
 Se solicita calcular e informar: 
 1- Para cada país, la cantidad de pedidos a entregar. 
 2- La forma de pago más utilizada}
+
 program Distribuidora;
 type
  rango = 1..4;
