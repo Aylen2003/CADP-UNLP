@@ -1,4 +1,4 @@
-{Una productora nacional realiza un casting de personas para la selección de actores extras de una
+{ Una productora nacional realiza un casting de personas para la selección de actores extras de una
 nueva película, para ello se debe leer y almacenar la información de las personas que desean
 participar de dicho casting. De cada persona se lee: DNI, apellido y nombre, edad y el código de
 género de actuación que prefiere (1: drama, 2: romántico, 3: acción, 4: suspenso, 5: terror). 
