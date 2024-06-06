@@ -133,8 +133,8 @@ var
  pri:lista;
  camionesVec:camiones;
 begin
-	pri:=nil;
-	CargraVector(camionesVec); // se dispone
-	leerLista(pri);
-	analizarLista(pri,camionesVec);
+ pri:=nil;
+ CargraVector(camionesVec); // se dispone
+ leerLista(pri);
+ analizarLista(pri,camionesVec);
 end.
