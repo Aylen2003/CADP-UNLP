@@ -40,7 +40,7 @@ type
    end;
   contador = array [cre] of integer; // para parte del inciso b
 
-procedure CargarVector(var a: arrEmpre; // SE DISPONE
+procedure CargarVector(var a: arrEmpre); // SE DISPONE
 
 procedure leerCredito(var c: credito);
 begin
