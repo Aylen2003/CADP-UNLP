@@ -35,6 +35,7 @@ begin
       write ('Precio del producto:'); readln(p.precio);
    end;
 end; 
+
 procedure AgregarAtras(var L, ULT:lista; p: producto);
 var
  nue: lista;
@@ -48,6 +49,7 @@ begin
      ULT^.sig:= nue;
    ULT:= nue;
 end;
+
 procedure CargarLista(var L:lista);
 var
  p: producto;
@@ -59,6 +61,7 @@ begin
       Leer(p);
   end;
 end;
+
 procedure Inicializar(var v: vector);
 var 
  i: rango;
@@ -66,6 +69,7 @@ begin
  for i:= 1 to 4 do 
      v[i]:= 0;
 end;
+
 procedure Minimos(v: vector; var min1,min2: integer);
 var 
  i: rango;
@@ -87,10 +91,12 @@ begin
         end;
  end;
 end;
+
 function Descomponer(num: integer):boolean;
 begin
    Descomponer:= ((num MOD 3)= 0);
 end;
+
 procedure Procesar(L:lista);
 var
  cant,min1,min2: integer;
