@@ -48,8 +48,8 @@ end;
 {Programa Principal}
 var
  pri:lista;
-BEGIN
-	pri:=nil;
-	cargarLista(pri); // se dispone
-	analizarLista(pri);
-END.
+begin
+  pri:=nil;
+  cargarLista(pri); // se dispone
+  analizarLista(pri);
+end.
