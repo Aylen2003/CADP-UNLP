@@ -146,7 +146,7 @@ end;
 var
  L:lista;
 begin
-	L:=nil;
-	cargarLista(L);
-	digitos(L);
+ L:=nil;
+ cargarLista(L);
+ digitos(L);
 end.
