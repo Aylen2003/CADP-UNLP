@@ -9,6 +9,7 @@ B) Informar la cantidad de sesiones del género "Reggaeton" cuya cantidad de vis
 cantidad de dígitos pares que impares.
 C) COMPLETO: Realizar un módulo que reciba un título de sesión y elimine dicha sesion de la estructura. El título de 
 sesion puede no existir. Invocar el módulo desarrollado en el programa principal con titulo leído por teclado.}
+
 program BizarrapTema1;
 type
  cadena = string[50];
