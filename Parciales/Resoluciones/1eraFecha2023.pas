@@ -72,12 +72,12 @@ end;
 
 procedure agregarAdelante(var L2:listaTren; tren:infoTren);
 var
- nue:lista;
+ nue:listaTren;
 begin
  new(nue);
  nue^.dato:= tren;
- nue^.sig:= L;
- L:= nue;
+ nue^.sig:= L2;
+ L2:= nue;
 end;
 
 procedure procesarInfo(L:lista; t:tabla; var L2:listaTren; v:vector);
