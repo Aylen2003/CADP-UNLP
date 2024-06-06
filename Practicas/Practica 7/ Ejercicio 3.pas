@@ -77,10 +77,10 @@ begin
 var
  pri,pri2:lista;
  codMax1,codMax2:integer;
-BEGIN
-	pri:=nil;
-	pri2:=nil;
-	cargarLista (pri);// Se Dispone
-	AnalizarLista(pri,pri2,codMax1,codMax2);
-	writeln('Los codigos de los auto con mayor km recorrido son',codMax1,'y',codMax2);
-END.
+begin
+ pri:=nil;
+ pri2:=nil;
+ cargarLista (pri);// Se Dispone
+ AnalizarLista(pri,pri2,codMax1,codMax2);
+ writeln('Los codigos de los auto con mayor km recorrido son',codMax1,'y',codMax2);
+end.
