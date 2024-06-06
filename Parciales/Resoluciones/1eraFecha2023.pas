@@ -70,7 +70,17 @@ begin
  maximo:= mesmax;
 end;
 
-procedure procesarInfo(L:lista; t:tabla; var L2:llistTren; v:vector);
+procedure agregarAdelante(var L2:listaTren; tren:infoTren);
+var
+ nue:lista;
+begin
+ new(nue);
+ nue^.dato:= tren;
+ nue^.sig:= L;
+ L:= nue;
+end;
+
+procedure procesarInfo(L:lista; t:tabla; var L2:listaTren; v:vector);
 var
  trenAct,cantVia,cantPasa: integer;
  costo:real;
@@ -95,6 +105,7 @@ begin
      writeln('El promedio de pasajeros en el tren',trenAct, 'es:',cantPasajeros/cantVia:5:2)
   end; 
 end;
+
 // Programa principal
 var
  L: lista;
