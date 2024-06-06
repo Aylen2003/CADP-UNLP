@@ -22,7 +22,7 @@ type
      dato: reserva;
      sig: lista;
    end;
-  nueva = record   // registro de la segunda lista
+  nueva = record   
      num: integer;
      total: real;
    end;
