@@ -8,6 +8,7 @@ código de cliente -1.
 b) Realizar un módulo que reciba la información obtenida en el inciso anterior y retorne:
 i) Los dos medios de pago que generaron el mayor monto total en ventas
 ii) Cantidad de notebooks de marca “Lenovo” vendidas a clientes cuyo código de cliente termina con un dígito par.}
+
 program Comercio;
 type
   rangoM = 1..200;
