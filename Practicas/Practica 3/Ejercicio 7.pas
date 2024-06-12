@@ -7,7 +7,7 @@ forma consecutiva por universidad y la lectura finaliza al leer un centro con 0 
   - Los dos centros con menor cantidad de becarios.
 }
 
-program practica3Ejer7;
+program Ejercicio7;
 type
   centro=record
     nombre:string;
