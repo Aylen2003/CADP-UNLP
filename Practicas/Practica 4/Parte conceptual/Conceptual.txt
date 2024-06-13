@@ -1,0 +1,23 @@
+1. ¿Qué se define como memoria estática?
+2. ¿Qué se define como memoria dinámica?
+3. ¿Qué es una variable de tipo puntero?
+4. ¿Qué hace la operación “NEW” aplicada en una variable del tipo puntero?
+5. ¿Qué hace la operación “DISPOSE” aplicada en una variable del tipo puntero?
+
+
+1. Se define como `Memoria Estática`, al espacio en memoria que se crea al declarar variables de cualquier tipo de dato(integer,char,boolean,
+    string,etc). La memoria que estas variables ocupan no pueden cambiarse durante la ejecución y tampoco puede ser liberada manualmente.
+
+2. Se define como `Memoria Dinámica`, a la memoria que se reserva en tiempo de ejecución y su tamaño puede variar durante la ejecución del programa.
+
+3. La variable tipo puntero, como lo indica su nombre, es un señalador a una dirección de memoria. Es de tipo simple y definido por el usuario, 
+sin embargo, el puntero puede señalar a cualquier tipo de dato que conocemos(integer,char,boolean,real,string,registros, arreglos u otro puntero).
+
+4. La operación `“NEW”` implica reservar una dirección de memoria dinámica libre para poder asignarle contenidos a la dirección que contiene 
+la variable de tipo puntero. 
+Se aplica de la forma
+        `new(variableTipoPuntero)`
+
+5. La operación `“DISPOSE”` implica liberar la memoria dinámica que contiene la variable de tipo puntero.
+Se aplica de la forma 
+      `dispose(variableTipoPuntero)`
