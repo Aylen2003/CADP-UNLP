@@ -1,6 +1,6 @@
-{ De acuerdo a los valores de la tabla que indica la cantidad de bytes que ocupa la representación interna de cada tipo de dato en Pascal, calcular 
-el tamaño de memoria en los puntos señalados a partir de(I), suponiendo que las variables del programa ya están declaradas y se cuenta con 400.000 
-bytes libres. Justificar mediante prueba de escritorio. }
+{ De acuerdo a los valores de la tabla que indica la cantidad de bytes que ocupa la representación interna de cada tipo de dato en Pascal, 
+calcular el tamaño de memoria en los puntos señalados a partir de(I), suponiendo que las variables del programa ya están declaradas y se 
+cuenta con 400.000  bytes libres. Justificar mediante prueba de escritorio. }
 
 program Alocacion_Dinamica;
 type
